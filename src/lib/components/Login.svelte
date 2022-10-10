@@ -41,6 +41,10 @@
   }
 </script>
 
+<svelte:head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+</svelte:head>
+
 <div class="Login">
   <h2 class="text-center">Connexion</h2>
   <p class="text-center">Veuillez entrer vos identifiants.</p>
@@ -49,7 +53,7 @@
   </FormGroup>
 
   <FormGroup floating label="Password">
-    <Input placeholder="MonMotDePasse12!" />
+    <Input type="password" placeholder="MonMotDePasse12!" />
   </FormGroup>
 
   <FormGroup>
