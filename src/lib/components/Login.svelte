@@ -1,5 +1,8 @@
 <script>
+	import { goto } from '$app/navigation';
+  
   import { t } from '$lib/i18n/index.js';
+  import { userStore } from '@/stores.js'
   /**
    * sveltestrap
   */
@@ -31,6 +34,10 @@
     // if (!state.password) return state.error = 'password'
     try {
       state.loading = true
+      userStore.set({
+        isLoggedIn: true
+      });
+      goto('/dashboard');
       // const response = await fetch('/api/sign-in'...
     } catch (error) {
       state.error = body?.message || 'Une erreur est survenue.'

@@ -1,5 +1,6 @@
+
 <script>
-	import Bell from "./Icons/Bell.svelte";
+  import Bell from "./Icons/Bell.svelte";
   import Card from 'sveltestrap/src/Card.svelte';
   import CardBody from 'sveltestrap/src/CardBody.svelte';
   import { notificationStore } from '@/stores'
