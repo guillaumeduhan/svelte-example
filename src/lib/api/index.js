@@ -3,8 +3,8 @@
    */
 
   const getUser = async () => {
-    // example
     return await new Promise(resolve => {
+      // TODO: to remove
       setTimeout(() => {
         resolve({
           name: 'Guillaume',

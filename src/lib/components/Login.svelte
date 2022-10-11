@@ -34,13 +34,13 @@
     // if (!state.password) return state.error = 'password'
     try {
       state.loading = true
-      userStore.set({
-        isLoggedIn: true
-      });
-      goto('/dashboard');
-      // const response = await fetch('/api/sign-in'...
+      const response = await fetch('/api/sign-in')
+        .then(({ token }) => {
+          Cookies.set('token', token)
+          // goto('/dashboard');
+        })
     } catch (error) {
-      state.error = body?.message || 'Une erreur est survenue.'
+      state.error = body.message || 'Une erreur est survenue.'
       setTimeout(() => state.error = undefined, 3000)
     } finally {
       state.loading = false

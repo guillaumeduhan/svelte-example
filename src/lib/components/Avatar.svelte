@@ -5,11 +5,13 @@ export let user;
 </script>
 
 <div class="Avatar cursor-pointer d-flex align-items-center justify-content-center" on:click>
-  {#if user}
+  {#if user !== {}}
     {#if user.img_url}
       <Image alt="avatar" style="max-width: 100%;" src={user.img_url} />
     {:else}
-      <span class="text-white fw-bold">{user.name[0]}</span>
+      {#if user.name}
+        <span class="text-white fw-bold">{user.name[0]}</span>
+      {/if}
     {/if}
   {/if}
 </div>

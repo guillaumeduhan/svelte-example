@@ -1,5 +1,5 @@
 <script>
-  import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation'
   import Cookies from 'js-cookie'
   import '../app.css'
 
@@ -13,14 +13,13 @@
 
   let state = {
     loading: true,
-    error: false,
-    isLoggedIn: false
+    error: false
   }
 
   userStore.subscribe((v) => {
-    if (v) {
-      state.isLoggedIn = true
-    }
+    // if (v !== {}) {
+    //   state.isLoggedIn = true
+    // }
   })
 
   const onAuthStageChanged = async () => {
@@ -34,8 +33,8 @@
         .then((user) => {
           if (user) {
             userStore.set(user)
+            goto('/dashboard')
           }
-          goto('/dashboard')
         })
     } catch (error) {
       console.log(error)
@@ -56,7 +55,7 @@
     <Loading style="height: auto;" />
   </div>
 {:else}
-  {#if state.isLoggedIn}
+  {#if $userStore}
     <Header />
     <div class="d-flex">
       <Sidebar />

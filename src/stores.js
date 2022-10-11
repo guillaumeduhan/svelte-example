@@ -1,6 +1,6 @@
 import { writable } from "svelte/store";
 
-export const userStore = writable({});
+export const userStore = writable(undefined);
 
 export const companyStore = writable([])
 
