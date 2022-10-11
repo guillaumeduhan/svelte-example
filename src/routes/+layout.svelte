@@ -1,8 +1,10 @@
 <script>
+  import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import Cookies from 'js-cookie'
 	import Login from "$lib/components/Login.svelte";
 	import Loading from "$lib/components/Loading.svelte";
+	import Header from '$lib/components/Header.svelte';
   import { userStore } from '@/stores'
   import { getUser } from '$lib/api'
 
@@ -52,6 +54,7 @@
   </div>
 {:else}
   {#if state.isLoggedIn}
+    <Header />
     <slot></slot> 
   {:else}
     <Login />
