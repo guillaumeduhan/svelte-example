@@ -5,4 +5,5 @@
 
 <main>
   Document {data.slug}
+  
 </main>
