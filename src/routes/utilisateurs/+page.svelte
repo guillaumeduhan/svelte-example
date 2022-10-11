@@ -3,5 +3,5 @@
 </script>
 
 <Col>
-    <h2 class="text-center">Dashbaord</h2>
+  <h2 class="text-center">Utilisateurs</h2>
 </Col>

@@ -13,31 +13,19 @@ userStore.subscribe(value => {
 
 const fetchUser = async () => {
   try {
-    state.loading = true
+    // state.loading = true
     /// { user } => je mets li
   } catch (error) {
     console.log(error)
   } finally {
-    state.loading = false
+    // state.loading = false
   }
 }
 
 fetchUser()
 </script>
 
-<main>
-  <Container>
-    <Header />
-    <Login />
-  </Container>
-  <!-- <div class="container" style="padding: 50px 0 100px 0">
-    {#if !session}
-      <Auth />
-    {:else}
-      <Account {session} />
-    {/if}
-  </div> -->
-</main>
+<Login />
 
 <style>
   @import "https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css";
