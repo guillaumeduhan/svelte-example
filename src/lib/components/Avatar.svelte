@@ -4,7 +4,7 @@ import Image from 'sveltestrap/src/Image.svelte';
 export let user;
 </script>
 
-<div class="avatar d-flex align-items-center justify-content-center" on:click>
+<div class="Avatar cursor-pointer d-flex align-items-center justify-content-center" on:click>
   {#if user}
     {#if user.img_url}
       <Image alt="avatar" style="max-width: 100%;" src={user.img_url} />
@@ -15,7 +15,7 @@ export let user;
 </div>
 
 <style>
-  .avatar {
+  .Avatar {
     width: 50px;
     height: 50px;
     border-radius: 25px;

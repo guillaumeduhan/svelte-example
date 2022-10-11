@@ -1,10 +1,13 @@
 <script>
-  import { onMount } from 'svelte';
   import { goto } from '$app/navigation';
   import Cookies from 'js-cookie'
+  import '../app.css'
+
 	import Login from "$lib/components/Login.svelte";
 	import Loading from "$lib/components/Loading.svelte";
 	import Header from '$lib/components/Header.svelte';
+	import Sidebar from '$lib/components/Sidebar.svelte';
+
   import { userStore } from '@/stores'
   import { getUser } from '$lib/api'
 
@@ -55,7 +58,12 @@
 {:else}
   {#if state.isLoggedIn}
     <Header />
-    <slot></slot> 
+    <div class="d-flex">
+      <Sidebar />
+      <div class="p-2 p-lg-4">
+        <slot></slot> 
+      </div>
+    </div>
   {:else}
     <Login />
   {/if}

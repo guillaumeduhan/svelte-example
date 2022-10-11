@@ -17,6 +17,7 @@
   import Notifications from '$lib/components/Notifications.svelte';
 
   let user;
+  let search;
   let showMenu = false
 
   userStore.subscribe(value => {
@@ -43,12 +44,16 @@
   const triggerMenu = () => {
     showMenu = !showMenu
   }
+
+  const searchHandler = () => {
+    goto(`/search?input=${search}`)
+  }
 </script>
 
 <Navbar flex class="d-flex align-center shadow-sm">
   <div class="d-flex align-center">
     <NavbarBrand>
-      <Img src={'logo.jpeg'} class="pr-4" style="width: 100px;" />
+      <Img src={'logo.png'} class="pr-4" style="width: 100px;" />
     </NavbarBrand>
     <FormGroup class="d-flex" style="margin-bottom: 0px!important; width: 600px">
       <Input
@@ -58,8 +63,9 @@
         placeholder="Rechercher un document..."
         class="bg-light text-black"
         style="max-width: 100%; margin-right: 12px;"
+        bind:value={search}
       />
-      <Button size="sm" text="Rechercher" />
+      <Button size="sm" text="Rechercher" on:click={searchHandler} />
     </FormGroup>
   </div>
   {#if user}
