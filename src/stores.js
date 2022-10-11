@@ -9,3 +9,5 @@ export const documentStore = writable([])
 export const contractStore = writable([])
 
 export const signataireStore = writable([])
+
+export const notificationStore = writable([])
