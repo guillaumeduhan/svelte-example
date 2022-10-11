@@ -60,7 +60,7 @@
     <Header />
     <div class="d-flex">
       <Sidebar />
-      <div class="p-2 p-lg-4">
+      <div class="p-2 p-lg-5 w-100">
         <slot></slot> 
       </div>
     </div>

@@ -8,7 +8,8 @@
       setTimeout(() => {
         resolve({
           name: 'Guillaume',
-          id: 1
+          user_id: 1434324334,
+          contracts_id: [2323, 3323, 434]
         })
       }, 0)
     })

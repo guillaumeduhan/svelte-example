@@ -58,7 +58,7 @@
   <FormGroup floating label="Login">
     <Input placeholder="me@mail.com" />
   </FormGroup>
-
+  <!-- TODO: binder les input -->
   <FormGroup floating label="Password">
     <Input type="password" placeholder="MonMotDePasse12!" />
   </FormGroup>
@@ -70,7 +70,7 @@
 
   {#if state.error}
     <Alert color="danger">
-      {$t(`errors.${state.error}`)}
+      {state.error}
     </Alert>
   {/if}
   

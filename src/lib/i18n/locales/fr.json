@@ -1,6 +1,7 @@
 {
   "errors.email": "Vous devez entrer une adresse e-mail.",
   "errors": {
+    "name": "Vous n'avez pas entré de nom",
     "password": "Vous devez entrer un mot de passe."
   },
   "sign_in": "Connexion",

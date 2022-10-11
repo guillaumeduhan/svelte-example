@@ -1,0 +1,22 @@
+{
+  "cat": [
+    {
+      "type": "medical",
+      "text": "Médical"
+    },
+    {
+      "type": "admin",
+      "text": "Admin"
+    }
+  ],
+  "privacy": [
+    {
+      "type": "INTERNAL",
+      "text": "Interne"
+    },
+    {
+      "type": "EXTERNAL",
+      "text": "Externe"
+    }
+]
+}

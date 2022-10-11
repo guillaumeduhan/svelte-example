@@ -3,22 +3,23 @@
 	import Nav from 'sveltestrap/src/Nav.svelte';
 	import NavLink from 'sveltestrap/src/NavLink.svelte';
 	import Icon from 'sveltestrap/src/Icon.svelte';
+	import { DocumentIcon, Contracts, Users } from '$lib/components/Icons';
 
 	export const slugs = [
 		{
 			title: 'Mes documents',
 			link: '/documents',
-			icon: 'folder'
+			component: DocumentIcon
 		},
 		{
 			title: 'Mes contracts',
 			link: '/contracts',
-			icon: 'document'
+			component: Contracts
 		},
 		{
 			title: 'Mes utilisateurs',
 			link: '/users',
-			icon: 'person'
+			component: Users
 		}
 	];
 
@@ -29,7 +30,10 @@
 	<Nav vertical class="vh-100">
 		{#each slugs as slug}
 			<NavLink href={slug.link} class={'bg-' + bg}>
-				{slug.title}
+				{#if slug.component}
+					<svelte:component this={slug.component}/>
+				{/if}
+				<span class="p-1">{slug.title}</span>
 			</NavLink>
 		{/each}
 	</Nav>

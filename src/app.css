@@ -1,3 +1,14 @@
+// Heritage
+
 .cursor-pointer {
   cursor: pointer;
+}
+
+.bg-grey {
+  background: #eee;
+}
+
+// Custom
+.Form {
+  max-width: 600px;
 }
